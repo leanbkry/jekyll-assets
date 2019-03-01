@@ -245,6 +245,7 @@ module Jekyll
       def prefix_url(user_path = nil)
         dest = strip_slashes(asset_config[:destination])
         cdn = make_https(strip_slashes(asset_config[:cdn][:url]))
+        base_org = jekyll.config["baseurl_root"] || jekyll.config["baseurl"]
         base = strip_slashes(jekyll.config["baseurl"])
         cfg = asset_config
 
