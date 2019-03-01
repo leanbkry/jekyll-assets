@@ -246,7 +246,7 @@ module Jekyll
         dest = strip_slashes(asset_config[:destination])
         cdn = make_https(strip_slashes(asset_config[:cdn][:url]))
         base_org = jekyll.config["baseurl_root"] || jekyll.config["baseurl"]
-        base = strip_slashes(jekyll.config["baseurl"])
+        base = strip_slashes(base_org)
         cfg = asset_config
 
         path = []
